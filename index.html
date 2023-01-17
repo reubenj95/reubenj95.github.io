@@ -1,9 +1,129 @@
 <html>
   <head>
-    <title>My blog</title>
+    <title>Reuben's Dev Academy Blog</title>
+    <meta charset="UTF-8">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="styles/main.css" rel="stylesheet" type="text/css">
+  </head>
   <body>
-    <h1>Kia ora Taiao! (Hello World!)</h1> 
-    <p> This is the beginning of my website home page.</p>
-    <p> It will eventually contain a list of links to all my blogs. </p>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">RHJ</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Sprints
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Sprint 1</a></li>
+                <li><a class="dropdown-item" href="#">Sprint 2</a></li>
+                <li><a class="dropdown-item disabled" href="#">Sprint 3</a></li>
+                <li><a class="dropdown-item disabled" href="#">Sprint 4</a></li>
+                <li><a class="dropdown-item disabled" href="#">Sprint 5</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">All Posts</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- <section id="header">
+      <div class="container-fluid py-4">
+
+        <h1 class="">Kia ora Taiao! (Hello World!)</h1> 
+        <p> This is the beginning of my website home page.</p>
+        <p> It will eventually contain a list of links to all my blogs. </p>
+      </div>
+    </section> -->
+    <section id="featuredPost">
+      <div class="container-fluid featured-post">
+        <div class="col-12 mx-0 featured-post-preview">
+          <div class="col-sm-12 col-md-6 d-flex post-info">
+            <span class="kicker"><p>Latest post:</p></span>
+            <a href="blog/te-hautaewa-template.html"><h2>The Story of Te Houtaewa</h2></a>
+            <p>E kore e mau i a koe, he wae kai pakiaka. <em>A foot accustomed to running over roots makes the speediest runner.</em></p>
+            <a href="blog/te-hautaewa-template.html" class="btn btn-outline-dark" target="_blank">Read more</a>
+          </div>   
+        </div>
+      </div>
+    </section>
+    <section id="recentPosts">
+      <div class="container-fluid d-flex">
+        <h2>Recent posts</h2>
+        <div class="card mb-3">
+          <div class="row g-0">
+            <div class="col-md-3 d-flex card-image">
+              <img src="public/img/mountains.jpg" class="rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Post title</h5>
+                <p class="card-text"><small class="text-muted">10 Jan, 2023</small></p>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <a href="" class="card-link">Read more</a><br><br>
+              </div>
+            </div>
+            <a href="" class="btn btn-outline-dark">See all posts</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr style="clear:both;">
+    <section id="about">
+      <div class="container-fluid">
+        <div class="row">
+          
+          <div class="author-image-col col-sm-12 col-md-4 d-flex">
+            <div class="author d-flex">
+              <img src="public/img/reuben-portrait.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <h2>About the Author</h2>
+            <p>Kia ora e te whānau,</p>
+            <p>I’m Reuben, and I’m based in Pōneke – more specifically in the tropical oasis of Taitā in Lower Hutt where I live with my wife Zoe, and our fur babies Andy (cat) and Bellamy (dog). </p>
+            <p>The Identity and values section, probably combined with the echo chamber of being home alone this week, has definitely got me thinking hard about this values stuff. I think the biggest theme for me at the moment is learning about yourself (myself?). I’ve always been a bit of a philomath, hoarding new knowledge like some kind of information dragon. Until maybe a year ago, I thought that I had a really good handle on my self-concept but a few big life experiences and fair amount of time and money spent on a top-notch therapist has been questioning a lot of those things. So those learning muscles have been turned inwards and I’m finding that I maybe had some assumptions abouut who/what/when/where I am that don’t hold so true anymore. </p>
+            <p>It’s certainly not easy to re-learn who you are and what you’re about, but I absolutely think it’s a good thing. After all, it’s a pretty big part of why I’m here! I studied and have subsequently worked in marketing for my whole career (aside from a brief, and terrible stint in sales *shudders*) and I always thought that was my ‘thing’. Turns out, what I liked about my early career, like the techy stuff, setting up automations and doing campaign reporting and all that jazz, was what I found fun and it all disappears as you get better at marketing and move into management type roles. Go figure!</p>
+            <p>All that to say, I’m stoked to be here and to embrace my nerdy, techy, build things that do cool stuff side with you all!</p>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="footer">
+      <div class="row">
+        <div class="col-6">
+          <span class="footer-heading"><a href="">All Sprints</a></span>
+          <div class="d-flex">
+            <a href="">Sprint 1</a>
+            <a href="">Sprint 2</a>
+            <a href="">Sprint 3</a>
+            <a href="">Sprint 4</a>
+            <a href="">Sprint 5</a>
+          </div>
+
+        </div>
+        <div class="col-6 copyright d-flex">
+          <span class="footer-copyright">&copy; Reuben Hawthorne-Jensen 2023</span>
+        </div>
+        <div class="d-flex dev-aca-link">
+          <a href="https://devacademy.co.nz/" target="_blank"><em>This website was produced as a part of the Dev Academy foundations course.</em></a>
+        </div>
+      </div>
+
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
   </body>
 </html>
