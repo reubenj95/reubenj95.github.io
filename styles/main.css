@@ -1,3 +1,155 @@
-body {
-  background-color: orange;
+section {
+  margin: 50px 0;
 }
+
+#featuredPost a {
+  color: #000;
+  text-decoration: none;
+}
+
+#featuredPost .btn:hover, #recentPosts .btn:hover {
+  color: #fff;
+  background-color: #380036;
+  border: 1px solid #fff;
+}
+
+.kicker {
+  color:#380036;
+}
+
+.featured-post{
+  background-image: url('../public/img/mountains.jpg');
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 99%;
+  height: 400px;
+
+}
+
+.featured-post-preview {
+  background-image: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0));
+  height: 100%;
+
+
+}
+
+.featured-post-preview .post-info{
+  height: 100%;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 0 7.5% 7.5%;
+}
+.featured-post-preview .post-info .btn {
+  width: 25%;
+}
+
+#recentPosts .container-fluid{
+  flex-direction: column;
+  align-items: center;
+  max-width: 85%;
+
+}
+
+#recentPosts h2{
+  align-self: flex-start;
+  margin: 0 0 25px 0;
+}
+
+#recentPosts .card {
+  max-width: 95%;
+  max-height: 200px;
+}
+
+#recentPosts .card-image {
+  max-height: 200px;
+  overflow: hidden;
+}
+
+#recentPosts .card-link {
+  color: #000;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+#recentPosts .card-link:hover{
+  color: #380036;
+}
+
+#recentPosts .btn {
+  max-width: 150px;
+  margin: 25px auto;
+}
+
+#about {
+  padding-top: 50px;
+}
+
+.author{
+  border: 1px solid white;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  overflow: hidden;
+  justify-content: center;
+  margin: 10px 30px;
+}
+
+#about .author img{
+  width: 300px;
+
+}
+
+.author-image-col {
+  justify-content: flex-end;
+}
+
+#footer {
+  background-color:rgb(65, 65, 65);
+  padding: 50px;
+  margin-bottom: 0;
+}
+
+#footer .col-6{
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#footer .col-6 div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 75px;
+}
+
+#footer a{
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-heading{
+  font-weight: 700;
+}
+
+.footer-copyright{
+  color:rgb(186, 186, 186);
+}
+
+#footer .copyright {
+  justify-content: flex-end;
+  align-items: flex-end;
+
+}
+
+#footer .dev-aca-link{
+  font-size: 14px;
+  justify-content: center;
+  margin-top: 50px;
+  text-decoration: underline;
+
+
+}
+
+
+
