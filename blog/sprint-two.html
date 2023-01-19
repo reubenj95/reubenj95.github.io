@@ -42,7 +42,71 @@
     <section id="header">
       <div class="container-fluid">
         <h1>Sprint 2</h1> 
+        <p><em>Jump to </em><a href="#tech">Tech <i class="fa-solid fa-arrow-down"></i></a><em>  or  </em><a href="#core">Core <i class="fa-solid fa-arrow-down"></i></a></p>
+
       </div>
+    </section>
+    <hr>
+    <section id="tech">
+      <div class="container blog-copy">
+        <span class="core-header"><h2>Understanding Positioning in CSS & HTML</h2></span>
+        <span class="blog-subtitle"><p><em>Tech Blog Post &#8211; 19 January, 2023</em></p></span>
+        <p><strong>Sometimes it can seem like elements on a webpage have a mind of their own. You know that it <em>should</em> be possible to make a div go to a certain spot, or to make an image line up with a heading. You’ve seen websites where this happens. You’ve maybe even done it yourself by chance now and then. But gettng it to work on demand? Well that’s a different story. </strong></p>
+
+<p>A lot of the time (not always, mind you), these challenges can be met headon with a solid understanding of the ‘position’ attribute, and today we’re going to dive into exactly how it works and how you can use it to make some pretty lil’ pages.<p>
+
+<p>Before we start, a quick practical note about how to edit the actual position of each of these elements. Along with setting the position attribute for an element, you can also set values for top, bottom, left and right. The default settings for this are top: 0; left: 0; and can be set to numeric values just like any other CSS attribute. This will make more sense soon, but this guide would be incomplete without this note. Enough said – on with the post!</p>
+<h3>Position: Static</h3>
+<p>So first, what exactly is the position attribute doing when no-one is looking?</p>
+<p>In simple terms, the position attribute tells the browser where to put and element within the document when it loads. By default, position is set to ‘static’. You might be led to believe that static means unmoving, which could lead you astray pretty quickly!</p>
+
+<p>Much like the latest teen high-school drama to appear on Netflix, the position attribute is all about relationships. The browser needs a point of reference to position the element in relation to, and that is where the different options come in when we’re setting our position attribute in CSS. So it’s important to remember that by default, the term ‘static’ means static within the flow of the document. It’s kind of like a queue at the grocery store, and the static position is the internet version of ‘no cutsies!’ The element will remain in it’s place between the two elements that are before and after it in the HTML document. </p>
+<br>
+<h3>Position: Relative</h3>
+<p>But what if you want to make something that looks more like a webpage and less like a poorly formatted university assignment? Well, this is where the fun begins as we start to branch out with our position types.</p>
+
+<p> We’re going to continue with the teen drama analogy because it kinda works quite well for this blog (and it’s just super fun and relatable, right?)</p>
+<p>The relative position tells the browser where to place the element in relation to where it would naturally appear in the flow of the document (i.e. relative to it’s default ‘static’ position). If the static position is our main character, then the relative position is their best friend and supporting lead. They’re the one always found two steps behind and to the left of the main character as they walk dramatically down the hallway.</p>
+<div style="display: flex; position: static;">
+  <div style="margin: 10px;">
+    <div style="background-color: orange;position:static;height:100px;width: 200px;text-align:center;margin-top: 0;"><p style="padding-top:40px;">position: static</p></div>
+    <div style="background-color: blue;position:static;height:100px;width: 200px;color:#fff;text-align:center;margin-top: 0;"><p style="padding-top:40px;">position: static</p></div>
+  </div>
+  <div style="margin: 10px;">
+    <div style="background-color: orange;position:static;height:100px;width: 200px;text-align:center;"><p style="padding-top:40px;">position: static</p></div>
+    <div style="background-color: blue;position:relative;opacity: 50%;color:#fff;top:-100px;height:100px;width: 200px;text-align:center;"><p style="padding-top:40px;">position: relative;<br>top: -100px;</p></div>
+  </div>
+</div>
+<p>With the relative position you get to be the director, telling your supporting cast where they should be standing in relation to the main character. This can be a fickle approach, especially on dynamic or responsive webpages as it could change as other elements on the page change.</p>
+<p>That said, it’s useful for creating a relationship between two elements in a relatively isolated part of your page. For example, maybe you have two divs that are 100px tall each and stacked on top of each other within another div. You could set reduce the opacity of the second element and set position: relative with a value of top: -100px. This would create a transparent overlay for whatever is in the first div that would remain in place so long as those divs stay close together.</p>
+<br>
+<h3>Position: Fixed</h3>
+<p>Okay, so that makes sense. But what about if you want to buck the trend, stand on your own, and get out of the flow of society, *ahem* I mean, the DOM? Well in the words of modern day high schoolers, I got you fam. Let’s talk about the fixed position property.</p>
+<div class="fixed-element" style="background-color: orange;position:fixed;height:100px;width: 200px;text-align:center;top: 40%;right: 10px;"><p style="padding:10px 5px;">I am a fixed element. Read more to learn how I work.</p></div>
+<div class="pac-man"><img src="../public/img/800px-Pac_Man.svg.png" alt=""><p>Nom nom nom. My z-index is 2 so I'm going to eat this div!</p></div>
+<p>In websites, as in high school, it’s all about how people see you and you can’t show that you’re unique unless there’s a common world view (or viewport) to compare youself to, right? That’s kind of how the fixed property functions. It takes an element out of the flow of the document and positions it in relation to the view port based using the position you provide in your stylesheet.</p>
+
+<p>Because this approach position is completely separated from the rest of the page, it will stay in place when the user scrolls, appearing to slide over the rest of the content, as if it is floating. You will have seen this commonly for pop-ups on websites that stay in place even when you try to scroll away. Beware the dreaded z-index however! It’s usually best to put the code for your fixed element at the end of the document to prevent it from playing hide and seek behind other elements on the page!</p>
+<br>
+<h3>Position: Absolute</h3>
+<p>Last but not least, we have the absolute position which is perhaps the most complicated of the three attributes we’re discussing today. Not disimilar from our teen drama characters, the absolute position represents that absolute authority of parents to decide our fate – or something like that.</p>
+
+<p>Elements with the absolute position are displayed by the browser in relation to their closest positioned ancestor. In other words, the browser looks at the browser looks at the other elements that the positioned element is nested within until it finds one with a position set in the stylesheets. When it finds one, it works similar to the relative position, using the location settings to display the element in relation to the position of that parent element.</p>
+
+<p>This can get confusing as it may not always be obvious which parent element is being used as the point of reference. What’s more, if the browser can’t find a positioned parent, it will default to using the document body, which can make it look like it is being positioned relative to the viewport (which it definitely isn’t).</p>
+
+<p>Using the absolute position is much like our titular teen protagonist getting grounded for going to that party they shouldn’t have attended. The parent wants to keep the child close to make sure they can’t get into any mischief. And to extend the anology, if the parent isn’t there to intervene, then all hell breaks loose and the child is on their own.</p>
+
+<p>Just bacause it’s a touch complex, doesn’t mean it isn’t a useful property however. A great usecase would be positioning some text, like a title or caption over an image. Just make sure you test it at different screen sizes to make sure you stay colouring between the lines.</p>
+<div style="position: relative">
+  <p><em>Can we position a caption over top of this here image?</em></p>
+  <img style="width: 100%;" src="../public/img/adi-goldstein-Hli3R6LKibo-unsplash.jpg" alt="">
+  <div style="width: 100%; position: absolute;bottom:0;background-color:#696969;color:#fff;padding-top: 5px;text-align:center;opacity: 75%;"><p>We <em>absolutely</em> can do that ;)</p></div>
+</div>
+<br>
+<p>So today we’ve learned two key things. First, we now know that a fictional American high school has much more in common with HTML than it would appear on the surface. Second we now have a good summary of what the three main position attributes do, and how they work. Now, the best thing you can do is go and try it for yourself and if you get stuck, take a break to watch some Netflix as revision. </p>
+
+
     </section>
     <div class="d-flex back-button">
       <a href="all-posts.html">Back to All Posts&nbsp;</a>
