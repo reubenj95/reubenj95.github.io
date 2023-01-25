@@ -76,9 +76,42 @@
     <hr>
     <section id="tech">
       <div class="container blog-copy">
-        <span class="core-header"><h2>No Tech Post here</h2></span>
-        <span class="blog-subtitle"><p><em>Tech Blog Post &#8211; XX January, 2023</em></p></span>
-        <p><strong>Yet...</strong></p>
+        <span class="core-header"><h2>Let's make a JavaScript Sandwich</h2></span>
+        <span class="blog-subtitle"><p><em>Tech Blog Post &#8211; 26 January, 2023</em></p></span>
+        <p><strong>Web development is like making a sandwich. No really, I’m serious. Let me explain.</strong></p>
+
+<p>There are three things (generally) that you need to make a sandwich (or at least one that’s worth eating.) You need to gather the ingredients, you need to assemble those ingredients in a satisfactory order and you need someone (you) to do the making – lettuce and ham in a fridge does not a lunch make!</p>
+
+<p>In our delicious analogy, the ingredients are the HTML, the building blocks that we define as the structure of our web-page sandwich. The assembly order is our CSS, it’s the part that pulls it all together and makes it look pretty. And you, dear sandwich maker, are the JavaScript – or which whichever programmatic language we’re using, who brings it all together, makes the things happen and brings the sandwich to life. </p>
+
+<p>All three of these components are required to make a compelling sandwich – and the same is true of a web page. Structure, design and interactivity: that’s what makes a page exciting. </p>
+
+<p>So now that we have our basic analogy established, let’s explore a few key interactions that you might have with a webpage, but let’s do it in sandwich terms. </p>
+
+<p>So first, let’s talk about loops and control flows. Imagine you’re headed out to a picnic with some friends. You’re not sure exactly who is going to show (Phil is a little flaky these days and Sara said she might be late) so you figure that the best solution is to make as many sandwiches as you can, just to be safe. </p>
+
+<p>You set about making the carb-loaded feast and you have your ingredients (your HTML) laid out on the kitchen bench. Now some of these ingredients are more than you need – like that jumbo sized tub of Best Food’s Mayo, while others are more finite, like the solitary loaf of fresh bread that you baked for the occasion. So what will you do? You make as many sandwiches as the finite items allow, right? You’ll lay out the bread and if there are 10 pieces, you’ll make 5 sandwiches. That’s kind of how loops work. You define a finite condition (i.e. until I run out of bread) and tell the webpage to keep doing something  (making a sandwich) until the condition is either met, or is no longer true (depending on the type of loop). The result is a delightful picnic with a number of sandwiches that is defined by the conditions (ingredients) you provided. </p>
+
+<p>Okay, so that’s loops, but what’s this control flow thing? Well, this might cause some controversy in the comments, but there really is no objectively correct way to make a sandwich. Some people like their pickles on top, some prefer a briny hit closer to the tongue mixed in with some relish. The important point is that regardless of the preference of the person who consumes the sandwich, the order it is made will always be defined by the person preparing it. In our picnic preparation, you can imagine the chaos that would result if you didn’t take a systematic approach to the task. If you’re just chucking things in willy-nilly, how will you know you got everything in each sandwich? Plus Sandra is allergic to tomatoes, so how will you remember which ones she can eat?</p>
+
+<p>Control flow is all about a defined order in which ‘the sandwich is made’, or in website world, it’s the order in which chunks of code are executed to interact with elements on the page. In JavaScript, this is pretty much a top-to-bottom situation (until we get into async, but we may need a richer food group for that analogy) and this is used by developers to make sure things work as they’re meant to. Failing to do so could cause the internet equivalent of adding mayo to your sandwich before you add the bread – that is to say it could make a big mess of things. So control flow is clearly important to understand!</p>
+
+<p>So what exactly do these loops and control flows and things interact with? Well there are three core terms you need to know: arrays, objects and functions. </p>
+
+<p>Arrays and Objects are best talked about in relation to each other, because technically arrays don’t exist. Or they do, but they’re really just a special version of an object. In JavaScript, you can store information in something called a variable – which you can think of as like your picnic basket from earlier. In that basket, you can place any number of different things and generally, if you’re dealing with multiple baskets, you’ll give them some kind of identifier that lets you know what is in each one (or at least you should!!!). </p>
+
+<p>So if you had just one thing in your basket, we would call that a plain old variable in JavaScript terms. However, having one thing in a basket doesn’t always make a lot of sense unless you really need to hold it somewhere. Where baskets get really useful is when you need to carry a bunch of things with you to access when you need them. </p>
+
+<p>So, to labour the analogy, let’s return to sandwiches. Let’s say you made a bunch of sandwiches, each with one thing in them. Some have peanut butter, some have jam, some have honey and so on. But the key here is that each sandwich only has one filling and you place these sandwiches in the basket. In JavaScript, we would call that basket an array, because even though each item could be a different type, they each only have one type (filling). </p>
+
+<p>But what if you’re making fancy sandwiches that have a bunch of different things in them? Well, that’s where our objects become handy. So say you were preparing for your picnic and you decided that, in the interests of variety, you would set up a system to include one item in each sandwich from four different categories. Each sandwich will have protein, greenery, garnish and condiment. For proteins you have the options of chicken or beef, for greenery you have lettuce or spinach, for garnish you have pickles and radish and for condiments you have mayo and mustard. As you can see, this would give you quite a range of sandwich combinations but in a consistent structure. This way when Barry declares that he wants chicken, but that he hates mustard, you can find the exact sandwich for him. </p>
+
+<p>When you put these sandwiches in your basket, you’ve created a JavaScript object. Each sandwich is like an item in that object that has its own set of information inside it to tell us what sort of sandwich it is. With the array sandwiches, we only needed one piece of information about the sandwich, but these are more complex so we need a way to tell which is which, even if only one of the four options is different. Objects give us the structure we need to pull more complex, nested information out of a set of data to do more interesting things on the internet. </p>
+<p>Finally, we have to talk about functions. All of the above sounds like a lot of work, right? You’re going to be exhausted by the time you get to that picnic, especially if you have to think about how to structure the sandwich and what to include for each one that you make. But what if you could make a system that makes the process much simpler and more repeatable? Let’s say you lay out the ingredients in a grid, and you start to assemble the sandwiches in a systematic way. You start with chicken and make sure you’ve gotten every possible combination, before moving onto the beef and so on. </p>
+<p>That system, the process that you follow in a consistent way each time, is like a function in JavaScript. It is a way to put a series of steps into a repeatable block that you can call on whenever it is required. This reduces the resources (mental load) required to execute a program (make a sandwich) and makes it much easier to keep track of what is happening and where you’re up to in the process. You do the thinking up front and then just fall back on your pre-defined functions whenever you need it. </p>
+<p>So when you’re next making a sandwich, just remember that you’re essentially a web developer only with more delicious code. </p>
+
+
 
     </section>
     <div class="d-flex back-button">
