@@ -30,7 +30,7 @@ section {
 }
 
 .blog-copy a{
-  text-decoration: none;
+  text-decoration: underline;
   color: #380036;
 }
 
@@ -291,6 +291,31 @@ section {
   transition: background-color 1s ease;
   transition: color 1s ease;
 }
+.fixed-element {
+  background-color: orange;
+    position: fixed;
+    height: 120px;
+    width: 200px;
+    text-align: center;
+    top: 0;
+    right: 10px;
+}
+
+.second-half{
+  position: relative;
+  z-index: 4;
+  background-color: #fff;
+}
+
+.pac-man {
+  display: block;
+  position: absolute;
+  right: 0;
+  background-color: #fff;
+  width: 250px;
+  z-index: 2;
+}
+
 
 /* Small Screens*/
 @media only screen and (max-width: 480px) {
@@ -310,6 +335,15 @@ section {
   .big-button{
     width:85%;
   }
+
+  .pac-man {
+    display: none;
+  }
+
+  #fixedElement:after{
+    content: ' Tap me to make me go away.'
+  }
+
 }
 
 
@@ -325,10 +359,33 @@ section {
     width:85%;
   }
   .pac-man {
+    display: none;
+  }
+  #fixedElement:after{
+    content: ' Tap me to make me go away.'
+  }
+
+}
+
+
+
+/* Large Screens*/
+@media only screen and (min-width: 769px){
+  .author-image-col {
+    justify-content: flex-end;
+  }
+  .big-button{
+  width: 49%
+  }
+  .second-half{
+    margin-top: 200px;
+  }
+  .pac-man {
+    display: block;
     position: absolute;
     right: 0;
+    margin-top: 20px;
     background-color: #fff;
-    height: 2014px;
     width: 250px;
     z-index: 2;
   }
@@ -345,17 +402,8 @@ section {
     width: 25px;
 
   }
-
-}
-
-
-/* Large Screens*/
-@media only screen and (min-width: 769px){
-  .author-image-col {
-    justify-content: flex-end;
-  }
-  .big-button{
-  width: 49%
+  #fixedElement:after{
+    content: ''
   }
   
 }
